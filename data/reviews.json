@@ -1,41 +1,29 @@
 {
-  "_comment": "Remplacez ce contenu par vos vrais avis Google (copiez-collez le texte exact + prénom + note). Ces avis sont ceux déjà affichés sur l'ancien site, en attendant.",
+  "_comment": "Vrais avis Google de Booth In Lyon.",
   "reviews": [
     {
-      "author": "Camille & Thomas",
+      "author": "Yas Mine",
       "context": "Mariage",
       "rating": 5,
-      "text": "Une animation au top pour notre mariage ! Les invités ont adoré, l'équipe était adorable et super pro."
+      "text": "Nous avons loué ce PhotoBooth pour notre mariage et c'était juste parfait ! Tous nos invités – petits comme grands – se sont éclatés toute la soirée. Beaucoup de rires, de super souvenirs, et des photos magnifiques à garder. Un vrai plus pour l'ambiance du mariage. Je recommande à 100 % ! Un grand merci à Charlotte pour son professionnalisme et sa réactivité, vraiment c'est super agréable d'avoir des personnes comme ça pour organiser son mariage !"
     },
     {
-      "author": "Entreprise B.",
-      "context": "Soirée annuelle",
+      "author": "Yoann Cabioc'h",
+      "context": "Mariage",
       "rating": 5,
-      "text": "Parfait pour notre soirée d'entreprise, tout le monde a joué le jeu grâce aux accessoires. On recommande !"
+      "text": "Super pratique, bonne qualité et service impeccable de Charlotte. Je recommande !"
     },
     {
-      "author": "Sophie",
+      "author": "Sylvie Sylvie",
+      "context": "Mariage & anniversaire",
+      "rating": 5,
+      "text": "Merci à Charlotte et Bruno pour leur bienveillance et leur professionnalisme. Ils étaient présents pour le mariage de mon fils et j'ai tellement été ravie qu'ils ont fait également les 18 ans de ma fille. Je les recommande fortement car cela fait plaisir à tout le monde, les grands comme les petits."
+    },
+    {
+      "author": "Cédric Martinez",
       "context": "Anniversaire",
       "rating": 5,
-      "text": "Un vrai plus pour l'ambiance de la soirée, les tirages sont un souvenir génial pour tous les invités."
-    },
-    {
-      "author": "Alexandre P.",
-      "context": "Anniversaire 30 ans",
-      "rating": 5,
-      "text": "Service impeccable du début à la fin, installation rapide et discrète, résultat au rendez-vous."
-    },
-    {
-      "author": "Léa & Maxime",
-      "context": "Mariage",
-      "rating": 5,
-      "text": "Nos invités en parlent encore ! Une équipe à l'écoute et hyper réactive, on ne regrette absolument pas."
-    },
-    {
-      "author": "Agence Com'",
-      "context": "Lancement produit",
-      "rating": 5,
-      "text": "Exactement ce qu'il nous fallait pour dynamiser notre événement, très bon rapport qualité-prix."
+      "text": "Merci à Charlotte et Bruno pour votre professionnalisme, location de photobooth de qualité avec tous les accessoires nécessaires pour passer un bon moment. Je recommande à 100% !"
     }
   ]
 }

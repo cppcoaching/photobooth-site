@@ -32,6 +32,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; margin: 0; padding: 0; }
 h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; margin: 0 0 0.5em; line-height: 1.15; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
 p { margin: 0 0 1em; }
 
 .container {
@@ -207,7 +208,6 @@ p { margin: 0 0 1em; }
   gap: 64px;
   align-items: start;
 }
-.histoire-text h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
 .histoire-text p { color: var(--text-muted); font-size: 1.05rem; }
 .signature { font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; color: var(--gold-dark); margin-top: 12px; }
 .histoire-values { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -324,6 +324,8 @@ p { margin: 0 0 1em; }
 .option-card-body p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px; }
 .option-price {
   align-self: flex-start;
+  margin-top: auto;
+  padding-top: 8px;
   font-family: var(--font-serif);
   font-weight: 600;
   color: var(--gold-dark);
@@ -344,6 +346,26 @@ p { margin: 0 0 1em; }
   font-weight: 700;
   color: var(--gold-light);
 }
+
+/* ==========================================================================
+   Exemples de modèles
+   ========================================================================== */
+.modeles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.modele-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(198,161,91,0.25);
+  background: var(--white);
+  aspect-ratio: 3 / 2;
+}
+.modele-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.modele-card:hover img { transform: scale(1.05); }
 
 /* ==========================================================================
    Avis
@@ -401,30 +423,30 @@ p { margin: 0 0 1em; }
    Réservation / Calendrier
    ========================================================================== */
 .mini-steps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin: 36px 0 8px;
-  padding: 20px 28px;
-  background: var(--cream);
-  border-radius: var(--radius);
-  border: 1px solid rgba(198,161,91,0.25);
 }
 .mini-step {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-size: 0.9rem;
   color: var(--text-muted);
+  padding: 20px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  border: 1px solid rgba(198,161,91,0.25);
 }
 .mini-step span {
   flex-shrink: 0;
-  width: 28px; height: 28px;
+  width: 32px; height: 32px;
   border-radius: 50%;
   background: var(--black);
   color: var(--gold-light);
   font-family: var(--font-serif);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   display: flex; align-items: center; justify-content: center;
 }
 
@@ -452,27 +474,41 @@ p { margin: 0 0 1em; }
   color: var(--gold-dark);
   margin-bottom: 20px;
 }
-#booking-calendar { width: 100%; }
+#booking-calendar { display: none; }
 .flatpickr-calendar {
-  box-shadow: none;
   width: 100% !important;
   max-width: 100%;
-  background: transparent;
+  background: var(--white);
+  border: 1.5px solid rgba(198,161,91,0.5);
+  border-radius: 12px;
+  padding: 16px 12px 4px;
+  box-shadow: 0 16px 32px -20px rgba(13,12,11,0.25);
 }
+.flatpickr-months { margin-bottom: 6px; }
+.flatpickr-current-month { font-size: 1.05rem; }
+.flatpickr-current-month .cur-month, .flatpickr-current-month input.cur-year { font-weight: 600; color: var(--text); }
+span.flatpickr-weekday { font-size: 0.72rem; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; }
 .flatpickr-days, .dayContainer { width: 100% !important; max-width: 100%; }
-.flatpickr-day { border-radius: 8px; }
+.flatpickr-day {
+  border-radius: 8px;
+  font-size: 0.95rem;
+  height: 42px;
+  line-height: 40px;
+}
 .flatpickr-day.day-unavailable {
   text-decoration: line-through;
   color: #c0554f !important;
-  background: rgba(192, 85, 79, 0.08);
+  background: rgba(192, 85, 79, 0.1);
+  border-color: rgba(192, 85, 79, 0.2);
 }
-.flatpickr-day.today { border-color: var(--gold); }
-.flatpickr-day:hover { background: rgba(198,161,91,0.18); }
+.flatpickr-day.today { border-color: var(--gold) !important; font-weight: 600; }
+.flatpickr-day:hover { background: rgba(198,161,91,0.22); border-color: rgba(198,161,91,0.4); }
 .flatpickr-day.selected {
   background: var(--gold) !important;
   border-color: var(--gold) !important;
   color: var(--black) !important;
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: 0 6px 14px -6px rgba(198,161,91,0.7);
 }
 .calendar-legend { display: flex; gap: 20px; margin-top: 20px; font-size: 0.85rem; color: var(--text-muted); }
 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
@@ -592,7 +628,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
    ========================================================================== */
 @media (max-width: 960px) {
   .histoire-grid, .booking-grid, .contact-grid { grid-template-columns: 1fr; }
-  .pourquoi-grid, .pricing-grid, .options-grid { grid-template-columns: repeat(2, 1fr); }
+  .pourquoi-grid, .pricing-grid, .options-grid, .modeles-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-card-featured { transform: none; }
   .hero-content { grid-template-columns: 1fr; }
   .hero-visual { order: -1; }
@@ -620,11 +656,15 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
   .main-nav.open { transform: translateX(0); }
   .nav-toggle { display: flex; }
   .nav-cta { display: none; }
-  .histoire-values, .pourquoi-grid, .pricing-grid, .options-grid { grid-template-columns: 1fr; }
+  .histoire-values, .pourquoi-grid, .pricing-grid, .options-grid, .modeles-grid { grid-template-columns: 1fr; }
   .form-row-split { flex-direction: column; }
   .section { padding: 70px 0; }
   .hero-stats { gap: 24px; flex-wrap: wrap; }
   .review-card { flex-basis: 82vw; }
   .footer-top { grid-template-columns: 1fr; padding-top: 48px; }
-  .mini-steps { flex-direction: column; gap: 14px; }
+  .mini-steps { grid-template-columns: 1fr; gap: 14px; }
+}
+
+@media (max-width: 960px) {
+  .mini-steps { grid-template-columns: 1fr; }
 }
