@@ -19,7 +19,7 @@
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -27,7 +27,9 @@ body {
   background: var(--white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
+section[id] { scroll-margin-top: 90px; }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; margin: 0; padding: 0; }
@@ -156,7 +158,7 @@ p { margin: 0 0 1em; }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 90px;
+  padding-top: 120px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
@@ -209,8 +211,10 @@ p { margin: 0 0 1em; }
   align-items: center;
   margin-bottom: 48px;
 }
+.histoire-text { min-width: 0; }
 .histoire-text p { color: var(--text-muted); font-size: 1.05rem; }
 .histoire-photo {
+  min-width: 0;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -484,6 +488,7 @@ p { margin: 0 0 1em; }
   border: 1px solid rgba(198,161,91,0.3);
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 .booking-panel-title {
   font-family: var(--font-sans);
@@ -577,8 +582,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
    Contact
    ========================================================================== */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: stretch; }
-.contact-info { display: flex; flex-direction: column; justify-content: center; }
-.contact-grid .contact-form { justify-content: center; }
+.contact-info { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.contact-grid .contact-form { justify-content: center; min-width: 0; }
 .contact-lead { color: rgba(255,255,255,0.65); font-weight: 300; }
 .contact-list { display: flex; flex-direction: column; gap: 4px; margin: 32px 0; }
 .contact-list li {
@@ -683,10 +688,27 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
   .histoire-values, .pourquoi-grid, .pricing-grid, .options-grid { grid-template-columns: 1fr; }
   .form-row-split { flex-direction: column; }
   .section { padding: 70px 0; }
-  .hero-stats { gap: 24px; flex-wrap: wrap; }
-  .review-card { flex-basis: 82vw; }
+  .hero-stats { gap: 20px 28px; flex-wrap: wrap; }
   .footer-top { grid-template-columns: 1fr; padding-top: 48px; }
   .mini-steps { grid-template-columns: 1fr; gap: 14px; }
+
+  /* Carousels: drop arrow buttons, let cards fill the visible width with a peek of the next one */
+  .carousel-arrow { display: none; }
+  .reviews-carousel, .modeles-carousel { gap: 0; }
+  .review-card { flex-basis: 86vw; }
+  .modele-card { flex-basis: 78vw; }
+
+  /* Calendar: shrink to fit small screens */
+  .booking-panel { padding: 20px; }
+  .flatpickr-calendar { padding: 16px 8px 12px; }
+  .flatpickr-current-month { font-size: 1.05rem; }
+  .flatpickr-day {
+    height: 38px;
+    line-height: 36px;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  span.flatpickr-weekday { font-size: 0.68rem; }
 }
 
 @media (max-width: 960px) {
