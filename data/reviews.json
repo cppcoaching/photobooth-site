@@ -1,0 +1,41 @@
+{
+  "_comment": "Remplacez ce contenu par vos vrais avis Google (copiez-collez le texte exact + prénom + note). Ces avis sont ceux déjà affichés sur l'ancien site, en attendant.",
+  "reviews": [
+    {
+      "author": "Camille & Thomas",
+      "context": "Mariage",
+      "rating": 5,
+      "text": "Une animation au top pour notre mariage ! Les invités ont adoré, l'équipe était adorable et super pro."
+    },
+    {
+      "author": "Entreprise B.",
+      "context": "Soirée annuelle",
+      "rating": 5,
+      "text": "Parfait pour notre soirée d'entreprise, tout le monde a joué le jeu grâce aux accessoires. On recommande !"
+    },
+    {
+      "author": "Sophie",
+      "context": "Anniversaire",
+      "rating": 5,
+      "text": "Un vrai plus pour l'ambiance de la soirée, les tirages sont un souvenir génial pour tous les invités."
+    },
+    {
+      "author": "Alexandre P.",
+      "context": "Anniversaire 30 ans",
+      "rating": 5,
+      "text": "Service impeccable du début à la fin, installation rapide et discrète, résultat au rendez-vous."
+    },
+    {
+      "author": "Léa & Maxime",
+      "context": "Mariage",
+      "rating": 5,
+      "text": "Nos invités en parlent encore ! Une équipe à l'écoute et hyper réactive, on ne regrette absolument pas."
+    },
+    {
+      "author": "Agence Com'",
+      "context": "Lancement produit",
+      "rating": 5,
+      "text": "Exactement ce qu'il nous fallait pour dynamiser notre événement, très bon rapport qualité-prix."
+    }
+  ]
+}

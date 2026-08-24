@@ -1,0 +1,12 @@
+{
+  "_comment": "Dates déjà réservées (indisponibles à la location). Format YYYY-MM-DD. Ajoutez/retirez des dates ici pour tenir le calendrier du site à jour.",
+  "dates": [
+    "2026-08-29",
+    "2026-09-26",
+    "2026-10-10",
+    "2026-10-24",
+    "2026-10-31",
+    "2026-12-05",
+    "2027-07-17"
+  ]
+}
