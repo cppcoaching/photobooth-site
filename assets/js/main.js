@@ -45,4 +45,18 @@
     prevBtn.addEventListener("click", () => scrollByCard(-1));
     nextBtn.addEventListener("click", () => scrollByCard(1));
   }
+
+  // Modèles carousel
+  const modelesTrack = document.getElementById("modeles-track");
+  const modelesPrev = document.getElementById("modeles-prev");
+  const modelesNext = document.getElementById("modeles-next");
+  if (modelesTrack && modelesPrev && modelesNext) {
+    const scrollModeles = (dir) => {
+      const card = modelesTrack.querySelector(".modele-card");
+      const amount = card ? card.getBoundingClientRect().width + 24 : 300;
+      modelesTrack.scrollBy({ left: dir * amount, behavior: "smooth" });
+    };
+    modelesPrev.addEventListener("click", () => scrollModeles(-1));
+    modelesNext.addEventListener("click", () => scrollModeles(1));
+  }
 })();
