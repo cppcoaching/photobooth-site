@@ -31,4 +31,18 @@
   // Footer year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Reviews carousel
+  const track = document.getElementById("reviews-grid");
+  const prevBtn = document.getElementById("reviews-prev");
+  const nextBtn = document.getElementById("reviews-next");
+  if (track && prevBtn && nextBtn) {
+    const scrollByCard = (dir) => {
+      const card = track.querySelector(".review-card");
+      const amount = card ? card.getBoundingClientRect().width + 24 : 340;
+      track.scrollBy({ left: dir * amount, behavior: "smooth" });
+    };
+    prevBtn.addEventListener("click", () => scrollByCard(-1));
+    nextBtn.addEventListener("click", () => scrollByCard(1));
+  }
 })();

@@ -23,7 +23,6 @@
     <nav class="main-nav" id="main-nav">
       <a href="#histoire">Notre histoire</a>
       <a href="#formules">Formules</a>
-      <a href="#galerie">Galerie</a>
       <a href="#avis">Avis</a>
       <a href="#reservation">Réserver</a>
       <a href="#contact">Contact</a>
@@ -37,20 +36,24 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero" id="accueil">
-  <div class="hero-bg" style="background-image:url('assets/img/photobooth-ambiance.jpg')"></div>
-  <div class="hero-overlay"></div>
   <div class="container hero-content">
-    <p class="eyebrow">Location photobooth · Lyon &amp; alentours</p>
-    <h1>Parce que certains instants<br>méritent d'être gardés <span class="gold-text">pour toujours</span></h1>
-    <p class="hero-sub">Booth In Lyon habille vos mariages, anniversaires et soirées d'entreprise d'un photobooth moderne, spontané et 100% festif — imprimés, illimités, personnalisés.</p>
-    <div class="hero-actions">
-      <a href="#reservation" class="btn btn-gold">Voir les dates disponibles</a>
-      <a href="#formules" class="btn btn-outline">Découvrir nos formules</a>
+    <div class="hero-text">
+      <p class="eyebrow">Location photobooth · Lyon &amp; alentours</p>
+      <h1>Parce que certains instants méritent d'être gardés <span class="gold-text">pour toujours</span></h1>
+      <p class="hero-sub">Booth In Lyon habille vos mariages, anniversaires et soirées d'entreprise d'un photobooth moderne, spontané et 100% festif — imprimés illimités et personnalisés.</p>
+      <div class="hero-actions">
+        <a href="#reservation" class="btn btn-gold">Voir les dates disponibles</a>
+        <a href="#formules" class="btn btn-outline">Découvrir nos formules</a>
+      </div>
+      <div class="hero-stats">
+        <div><span>Dès</span><strong>259€</strong></div>
+        <div><span>Avis Google</span><strong>★★★★★</strong></div>
+        <div><span>Zone</span><strong>Lyon &amp; région</strong></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div><strong>259€</strong><span>dès</span></div>
-      <div><strong>5★</strong><span>avis Google</span></div>
-      <div><strong>Lyon</strong><span>&amp; région</span></div>
+    <div class="hero-visual">
+      <div class="hero-visual-glow"></div>
+      <img src="assets/img/produit-blanc.jpeg" alt="Cabine photobooth Booth In Lyon">
     </div>
   </div>
 </section>
@@ -125,7 +128,7 @@
   <div class="container">
     <p class="eyebrow">Nos formules</p>
     <h2>Une offre pour <span class="gold-text">chaque événement</span></h2>
-    <p class="section-intro">Installation et démontage inclus, photos numériques illimitées, accessoires et déguisements, cadres personnalisables, galerie web et clé USB fournie sur toutes nos formules.</p>
+    <p class="section-intro">Du dîner intime à la grande soirée dansante, trois formules simples et transparentes — sans frais cachés, sans surprise le jour J.</p>
 
     <div class="pricing-grid">
       <div class="pricing-card" data-formule="essentiel">
@@ -169,31 +172,33 @@
       </div>
     </div>
 
-    <div class="options-row">
-      <div class="option-pill"><strong>Livre d'or</strong> — 39€ (fourni avec accessoires)</div>
-      <div class="option-pill"><strong>Tirages supplémentaires</strong> — dès 49€ (+150 à +300 tirages)</div>
-      <div class="option-pill option-pill-gold"><strong>-10%</strong> pour tout événement du lundi au jeudi</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== GALERIE ===== -->
-<section class="section section-cream" id="galerie">
-  <div class="container">
-    <p class="eyebrow">Galerie</p>
-    <h2>Des souvenirs qui font <span class="gold-text">sourire</span></h2>
-    <div class="gallery-grid">
-      <div class="gallery-item gallery-item-tall">
-        <img src="assets/img/photobooth-ambiance.jpg" alt="Photobooth Booth In Lyon installé lors d'un événement" loading="lazy">
+    <div class="options-grid">
+      <div class="option-card">
+        <div class="option-card-media">
+          <img src="assets/img/tirages-papier.jpg" alt="Tirages papier supplémentaires Booth In Lyon" loading="lazy">
+        </div>
+        <div class="option-card-body">
+          <h3>Tirages supplémentaires</h3>
+          <p>Plus de tirages pour n'oublier personne : de +150 à +300 photos en plus.</p>
+          <span class="option-price">dès 49€</span>
+        </div>
       </div>
-      <div class="gallery-item">
-        <img src="assets/img/groupe-bowties.jpg" alt="Groupe d'amis prenant une photo souvenir au photobooth" loading="lazy">
+      <div class="option-card">
+        <div class="option-card-media option-card-media-icon">
+          <span>📖</span>
+        </div>
+        <div class="option-card-body">
+          <h3>Livre d'or photo</h3>
+          <p>Vos invités collent leur tirage et laissent un mot juste à côté — un souvenir à conserver toute la vie.</p>
+          <span class="option-price">39€</span>
+        </div>
       </div>
-      <div class="gallery-item">
-        <img src="assets/img/tirages-papier.jpg" alt="Tirages papier souvenirs Booth In Lyon" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/produit-blanc.jpeg" alt="Cabine photobooth Booth In Lyon et sa flightcase" loading="lazy">
+      <div class="option-card option-card-promo">
+        <div class="option-card-body">
+          <span class="option-promo-figure">-10%</span>
+          <h3>Événement en semaine</h3>
+          <p>10% de réduction automatique pour toute prestation du lundi au jeudi inclus.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -210,9 +215,13 @@
       <a href="https://share.google/9XU8M9jaBOnhDk6b7" target="_blank" rel="noopener" class="link-gold">Voir tous nos avis Google →</a>
     </div>
 
-    <div class="reviews-grid" id="reviews-grid">
-      <!-- Ces avis proviennent actuellement du site existant. Remplacez-les par le texte
-           exact de vos avis Google dans data/reviews.json — le contenu s'affiche automatiquement. -->
+    <div class="reviews-carousel">
+      <button type="button" class="carousel-arrow carousel-arrow-prev" id="reviews-prev" aria-label="Avis précédent">‹</button>
+      <div class="reviews-track" id="reviews-grid">
+        <!-- Ces avis proviennent actuellement du site existant. Remplacez-les par le texte
+             exact de vos avis Google dans data/reviews.json — le contenu s'affiche automatiquement. -->
+      </div>
+      <button type="button" class="carousel-arrow carousel-arrow-next" id="reviews-next" aria-label="Avis suivant">›</button>
     </div>
   </div>
 </section>
@@ -222,10 +231,17 @@
   <div class="container">
     <p class="eyebrow">Votre date est-elle disponible ?</p>
     <h2>Réservez votre <span class="gold-text">date</span> en ligne</h2>
-    <p class="section-intro">Choisissez une date libre dans le calendrier, indiquez vos coordonnées et la formule souhaitée. Nous recevons votre demande immédiatement et vous rappelons sous 24h pour confirmer. Vous pouvez aussi verser votre acompte directement en ligne pour bloquer votre date.</p>
+    <p class="section-intro">Choisissez une date libre dans le calendrier, indiquez vos coordonnées et la formule souhaitée : nous recevons votre demande immédiatement et vous rappelons sous 24h pour confirmer. Vous pouvez aussi verser votre acompte en ligne dès maintenant pour bloquer votre date.</p>
+
+    <div class="mini-steps">
+      <div class="mini-step"><span>1</span>Choisissez votre date &amp; envoyez votre demande</div>
+      <div class="mini-step"><span>2</span>Nous vous rappelons sous 24h pour confirmer</div>
+      <div class="mini-step"><span>3</span>Acompte versé, votre date est bloquée</div>
+    </div>
 
     <div class="booking-grid">
-      <div class="booking-calendar-wrap">
+      <div class="booking-panel booking-calendar-wrap">
+        <h3 class="booking-panel-title">1. Choisissez une date</h3>
         <div id="booking-calendar"></div>
         <div class="calendar-legend">
           <span><i class="dot dot-available"></i> Disponible</span>
@@ -233,74 +249,54 @@
         </div>
       </div>
 
-      <form id="booking-form" class="booking-form" novalidate>
-        <div class="form-row">
-          <label>Date choisie
-            <input type="text" id="selected-date-display" placeholder="Sélectionnez une date dans le calendrier" readonly required>
-            <input type="hidden" id="selected-date-value" name="date_evenement">
-          </label>
-        </div>
-        <div class="form-row form-row-split">
-          <label>Nom &amp; prénom
-            <input type="text" name="nom" required>
-          </label>
-          <label>Téléphone
-            <input type="tel" name="telephone" required>
-          </label>
-        </div>
-        <div class="form-row">
-          <label>Email
-            <input type="email" name="email" required>
-          </label>
-        </div>
-        <div class="form-row">
-          <label>Formule souhaitée
-            <select name="formule" id="formule-select" required>
-              <option value="essentiel">Essentiel Digital — 259€</option>
-              <option value="classique" selected>Classique — 329€</option>
-              <option value="grandsoir">Grand Soir — 399€</option>
-            </select>
-          </label>
-        </div>
-        <div class="form-row">
-          <label>Type d'événement &amp; message
-            <textarea name="message" rows="3" placeholder="Mariage, anniversaire, soirée d'entreprise... dites-nous en plus !"></textarea>
-          </label>
-        </div>
-        <input type="hidden" name="_subject" value="Nouvelle demande de réservation — Booth In Lyon">
+      <div class="booking-panel">
+        <h3 class="booking-panel-title">2. Vos coordonnées</h3>
+        <form id="booking-form" class="booking-form" novalidate>
+          <div class="form-row">
+            <label>Date choisie
+              <input type="text" id="selected-date-display" placeholder="Sélectionnez une date dans le calendrier" readonly required>
+              <input type="hidden" id="selected-date-value" name="date_evenement">
+            </label>
+          </div>
+          <div class="form-row form-row-split">
+            <label>Nom &amp; prénom
+              <input type="text" name="nom" required>
+            </label>
+            <label>Téléphone
+              <input type="tel" name="telephone" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Email
+              <input type="email" name="email" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Formule souhaitée
+              <select name="formule" id="formule-select" required>
+                <option value="essentiel">Essentiel Digital — 259€</option>
+                <option value="classique" selected>Classique — 329€</option>
+                <option value="grandsoir">Grand Soir — 399€</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Type d'événement &amp; message
+              <textarea name="message" rows="3" placeholder="Mariage, anniversaire, soirée d'entreprise... dites-nous en plus !"></textarea>
+            </label>
+          </div>
+          <input type="hidden" name="_subject" value="Nouvelle demande de réservation — Booth In Lyon">
 
-        <button type="submit" class="btn btn-gold btn-block">Envoyer ma demande de réservation</button>
-        <p class="form-note" id="booking-confirm" hidden>
-          Merci ! Votre demande a bien été envoyée, nous vous rappelons très vite. Vous pouvez dès maintenant verser votre acompte pour sécuriser votre date :
-        </p>
-        <a href="#" id="stripe-deposit-btn" class="btn btn-outline btn-block" hidden target="_blank" rel="noopener">Verser mon acompte en ligne</a>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ===== COMMENT RESERVER ===== -->
-<section class="section section-cream" id="comment-reserver">
-  <div class="container">
-    <p class="eyebrow">Comment réserver</p>
-    <h2>Trois étapes, <span class="gold-text">l'esprit tranquille</span></h2>
-    <div class="steps-grid">
-      <div class="step-card">
-        <span class="step-num">1</span>
-        <h3>Devis</h3>
-        <p>Remplissez le formulaire ci-dessus ou contactez-nous directement. Nous validons ensemble votre besoin par téléphone.</p>
-      </div>
-      <div class="step-card">
-        <span class="step-num">2</span>
-        <h3>Réservation</h3>
-        <p>Signature électronique du contrat et versement de l'acompte. Annulation gratuite jusqu'à 3 mois avant l'événement.</p>
-      </div>
-      <div class="step-card">
-        <span class="step-num">3</span>
-        <h3>Jour J</h3>
-        <p>Installation complète après finalisation du paiement. On s'occupe de tout, vous profitez de vos invités.</p>
+          <button type="submit" class="btn btn-gold btn-block">Envoyer ma demande de réservation</button>
+          <p class="form-note" id="booking-confirm" hidden>
+            Merci ! Votre demande a bien été envoyée, nous vous rappelons très vite. Vous pouvez dès maintenant verser votre acompte pour sécuriser votre date :
+          </p>
+          <a href="#" id="stripe-deposit-btn" class="btn btn-outline btn-block" hidden target="_blank" rel="noopener">Verser mon acompte en ligne</a>
+        </form>
       </div>
     </div>
+
+    <p class="booking-alt">Vous préférez nous parler directement plutôt que réserver en ligne ? Passez par notre <a href="#contact" class="link-gold">formulaire de contact</a> tout en bas de page.</p>
   </div>
 </section>
 
@@ -313,20 +309,32 @@
       <p class="contact-lead">Vous préférez échanger directement avec nous plutôt que de réserver en ligne ? Aucun souci, on est facilement joignables.</p>
       <ul class="contact-list">
         <li>
-          <span class="contact-label">Téléphone / WhatsApp</span>
-          <a href="tel:+33649127272">06 49 12 72 72</a>
+          <span class="contact-icon">📞</span>
+          <span class="contact-text">
+            <span class="contact-label">Téléphone / WhatsApp</span>
+            <a href="tel:+33649127272">06 49 12 72 72</a>
+          </span>
         </li>
         <li>
-          <span class="contact-label">Email</span>
-          <a href="mailto:contact@boothinlyon.fr">contact@boothinlyon.fr</a>
+          <span class="contact-icon">✉️</span>
+          <span class="contact-text">
+            <span class="contact-label">Email</span>
+            <a href="mailto:contact@boothinlyon.fr">contact@boothinlyon.fr</a>
+          </span>
         </li>
         <li>
-          <span class="contact-label">Instagram</span>
-          <a href="https://instagram.com/boothinlyon" target="_blank" rel="noopener">@boothinlyon</a>
+          <span class="contact-icon">📷</span>
+          <span class="contact-text">
+            <span class="contact-label">Instagram</span>
+            <a href="https://instagram.com/boothinlyon" target="_blank" rel="noopener">@boothinlyon</a>
+          </span>
         </li>
         <li>
-          <span class="contact-label">Fiche Google</span>
-          <a href="https://share.google/9XU8M9jaBOnhDk6b7" target="_blank" rel="noopener">Voir la fiche &amp; les avis</a>
+          <span class="contact-icon">★</span>
+          <span class="contact-text">
+            <span class="contact-label">Fiche Google</span>
+            <a href="https://share.google/9XU8M9jaBOnhDk6b7" target="_blank" rel="noopener">Voir la fiche &amp; les avis</a>
+          </span>
         </li>
       </ul>
       <p class="contact-zone">Basés à Lyon — intervention dans toute la région lyonnaise.</p>
@@ -360,13 +368,27 @@
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <img src="assets/img/logo.png" alt="Booth In Lyon" class="footer-logo">
-    <p>© <span id="year"></span> Booth In Lyon — Charlotte Paris &amp; Bruno Tarbes. Tous droits réservés.</p>
-    <div class="footer-links">
+  <div class="container footer-top">
+    <div class="footer-col footer-brand">
+      <img src="assets/img/logo.png" alt="Booth In Lyon" class="footer-logo">
+      <p>Location de photobooth à Lyon &amp; sa région.</p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Navigation</span>
+      <a href="#histoire">Notre histoire</a>
+      <a href="#formules">Formules</a>
+      <a href="#avis">Avis</a>
+      <a href="#reservation">Réserver</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Informations légales</span>
       <a href="assets/docs/cgv.pdf" target="_blank">Conditions générales de vente</a>
       <a href="assets/docs/confidentialite.pdf" target="_blank">Politique de confidentialité</a>
     </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> Booth In Lyon — Charlotte Paris &amp; Bruno Tarbes. Tous droits réservés.</p>
   </div>
 </footer>
 
