@@ -6,14 +6,14 @@
 window.BOOTH_CONFIG = {
   // Créez un formulaire sur https://formspree.io (gratuit) et collez son ID ici.
   // L'URL ressemble à : https://formspree.io/f/abcdwxyz
-  FORMSPREE_ENDPOINT: "https://formspree.io/f/VOTRE_ID_FORMSPREE",
+  FORMSPREE_ENDPOINT: "https://formspree.io/f/mvkpjoee",
 
   // Créez un lien de paiement par formule sur https://dashboard.stripe.com/payment-links
   // (montant de l'acompte défini directement dans Stripe). Collez chaque lien ci-dessous.
   STRIPE_LINKS: {
-    essentiel: "https://buy.stripe.com/VOTRE_LIEN_ESSENTIEL",
-    classique: "https://buy.stripe.com/VOTRE_LIEN_CLASSIQUE",
-    grandsoir: "https://buy.stripe.com/VOTRE_LIEN_GRAND_SOIR"
+    essentiel: "https://buy.stripe.com/3cIdR8ePR19y44C3ko1Fe02",
+    classique: "https://buy.stripe.com/3cIdR8ePR19y44C3ko1Fe02",
+    grandsoir: "https://buy.stripe.com/3cIdR8ePR19y44C3ko1Fe02"
   },
 
   // Montants d'acompte affichés à titre indicatif sur le site (à ajuster librement).
