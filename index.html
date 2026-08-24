@@ -41,7 +41,7 @@
     <div class="hero-text">
       <p class="eyebrow">Location photobooth · Lyon &amp; alentours</p>
       <h1>Parce que certains instants méritent d'être gardés <span class="gold-text">pour toujours</span></h1>
-      <p class="hero-sub">Booth In Lyon habille vos mariages, anniversaires et soirées d'entreprise d'un photobooth moderne, spontané et 100% festif — imprimés illimités et personnalisés.</p>
+      <p class="hero-sub">Booth In Lyon habille vos mariages, anniversaires et soirées d'entreprise d'un photobooth moderne, complet, avec une expérience 100% personnalisable pour tous les budgets.</p>
       <div class="hero-actions">
         <a href="#reservation" class="btn btn-gold">Voir les dates disponibles</a>
         <a href="#formules" class="btn btn-outline">Découvrir nos formules</a>
@@ -152,8 +152,7 @@
         <a href="#reservation" class="btn btn-outline btn-block" data-choose-formule="essentiel">Choisir cette formule</a>
       </div>
 
-      <div class="pricing-card pricing-card-featured" data-formule="classique">
-        <span class="badge">Le plus demandé</span>
+      <div class="pricing-card" data-formule="classique">
         <h3>Classique</h3>
         <p class="price">329<span>€</span></p>
         <ul>
@@ -165,7 +164,8 @@
         <a href="#reservation" class="btn btn-gold btn-block" data-choose-formule="classique">Choisir cette formule</a>
       </div>
 
-      <div class="pricing-card" data-formule="grandsoir">
+      <div class="pricing-card pricing-card-featured" data-formule="grandsoir">
+        <span class="badge">Le plus demandé</span>
         <h3>Grand Soir</h3>
         <p class="price">399<span>€</span></p>
         <ul>
@@ -325,9 +325,19 @@
           <div class="form-row">
             <label>Formule souhaitée
               <select name="formule" id="formule-select" required>
-                <option value="essentiel">Essentiel Digital — 259€</option>
-                <option value="classique" selected>Classique — 329€</option>
-                <option value="grandsoir">Grand Soir — 399€</option>
+                <option value="essentiel">Essentiel Digital</option>
+                <option value="classique" selected>Classique — 150 tirages</option>
+                <option value="grandsoir">Grand Soir — 300 tirages</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>Pensez-vous avoir besoin d'une recharge de tirages supplémentaire ?
+              <select name="recharge_supplementaire">
+                <option value="">Sélectionnez une réponse</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+                <option value="je-ne-sais-pas">Je ne sais pas encore</option>
               </select>
             </label>
           </div>
