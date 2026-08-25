@@ -1,11 +1,14 @@
 (function () {
   const grid = document.getElementById("reviews-grid");
-  if (!grid) return;
+  const heroCount = document.getElementById("hero-review-count");
+  if (!grid && !heroCount) return;
 
   fetch("data/reviews.json")
     .then((res) => res.json())
     .then((data) => {
       const reviews = data.reviews || [];
+      if (heroCount) heroCount.textContent = `(${reviews.length})`;
+      if (!grid) return;
       grid.innerHTML = reviews
         .map(
           (r) => `

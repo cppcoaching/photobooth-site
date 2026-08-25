@@ -56,6 +56,7 @@ p { margin: 0 0 1em; }
   margin-bottom: 0.75em;
 }
 .eyebrow-light { color: var(--gold-light); }
+.options-eyebrow { margin-top: 48px; }
 
 .section { padding: 100px 0; }
 .section-cream { background: var(--cream); }
@@ -174,7 +175,7 @@ p { margin: 0 0 1em; }
   padding-top: 24px;
 }
 .hero-stats div { display: flex; flex-direction: column; gap: 6px; }
-.hero-stats span { font-size: 0.72rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.1em; }
+.hero-stats span { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.1em; }
 .hero-stats strong { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; color: var(--gold-light); letter-spacing: 0.02em; }
 
 .hero-visual {
@@ -326,6 +327,8 @@ p { margin: 0 0 1em; }
 }
 .option-card-media { height: 170px; overflow: hidden; }
 .option-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.option-card-media-contain { background: var(--cream); padding: 10px; }
+.option-card-media-contain img { object-fit: contain; }
 .option-card-media-icon {
   display: flex; align-items: center; justify-content: center;
   background: var(--cream);
@@ -697,21 +700,31 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
   .main-nav.open { transform: translateX(0); }
   .nav-toggle { display: flex; margin-left: auto; }
   .nav-cta { display: none; }
+  .hero-content { padding-bottom: 56px; }
   .histoire-values, .pourquoi-grid, .pricing-grid, .options-grid { grid-template-columns: 1fr; }
   .form-row-split { flex-direction: column; }
   .section { padding: 70px 0; }
-  .hero-stats { gap: 10px; flex-wrap: nowrap; }
-  .hero-stats div { flex: 1 1 0; min-width: 0; gap: 4px; }
-  .hero-stats span { font-size: 0.6rem; white-space: nowrap; }
-  .hero-stats strong { font-size: 1rem; }
+  .hero-stats { flex-direction: column; align-items: flex-start; gap: 16px; }
   .footer-top { grid-template-columns: 1fr; padding-top: 48px; }
   .mini-steps { grid-template-columns: 1fr; gap: 14px; }
 
-  /* Carousels: drop arrow buttons, let cards fill the visible width with a peek of the next one */
-  .carousel-arrow { display: none; }
+  /* Carousels: let cards fill the visible width with a peek of the next one; keep the
+     arrows as small overlaid hints (out of flow) so people know they can navigate */
   .reviews-carousel, .modeles-carousel { gap: 0; }
   .review-card { flex-basis: 86vw; }
   .modele-card { flex-basis: 78vw; }
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px; height: 34px;
+    font-size: 1.1rem;
+    background: rgba(13,12,11,0.55);
+    backdrop-filter: blur(2px);
+    z-index: 5;
+  }
+  .carousel-arrow-prev { left: 6px; }
+  .carousel-arrow-next { right: 6px; }
 
   /* Calendar: shrink to fit small screens */
   .booking-panel { padding: 20px; }
