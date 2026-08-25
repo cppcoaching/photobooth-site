@@ -18,6 +18,27 @@
       navToggle.classList.remove("open");
     })
   );
+  document.addEventListener("click", (e) => {
+    if (
+      mainNav.classList.contains("open") &&
+      !mainNav.contains(e.target) &&
+      !navToggle.contains(e.target)
+    ) {
+      mainNav.classList.remove("open");
+      navToggle.classList.remove("open");
+    }
+  });
+
+  // Sticky mobile booking CTA — hide once the booking section is in view
+  const stickyCta = document.getElementById("mobile-sticky-cta");
+  const reservationSection = document.getElementById("reservation");
+  if (stickyCta && reservationSection && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      ([entry]) => stickyCta.classList.toggle("is-hidden", entry.isIntersecting),
+      { threshold: 0.15 }
+    );
+    observer.observe(reservationSection);
+  }
 
   // Pricing card "choose formule" -> preselect in booking form
   document.querySelectorAll("[data-choose-formule]").forEach((el) => {

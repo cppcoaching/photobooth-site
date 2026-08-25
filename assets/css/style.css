@@ -661,6 +661,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
   z-index: 90;
 }
 
+.mobile-sticky-cta { display: none; }
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -693,12 +695,15 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
     transition: transform 0.3s ease;
   }
   .main-nav.open { transform: translateX(0); }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; margin-left: auto; }
   .nav-cta { display: none; }
   .histoire-values, .pourquoi-grid, .pricing-grid, .options-grid { grid-template-columns: 1fr; }
   .form-row-split { flex-direction: column; }
   .section { padding: 70px 0; }
-  .hero-stats { gap: 20px 28px; flex-wrap: wrap; }
+  .hero-stats { gap: 10px; flex-wrap: nowrap; }
+  .hero-stats div { flex: 1 1 0; min-width: 0; gap: 4px; }
+  .hero-stats span { font-size: 0.6rem; white-space: nowrap; }
+  .hero-stats strong { font-size: 1rem; }
   .footer-top { grid-template-columns: 1fr; padding-top: 48px; }
   .mini-steps { grid-template-columns: 1fr; gap: 14px; }
 
@@ -719,6 +724,27 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); }
     margin: 0;
   }
   span.flatpickr-weekday { font-size: 0.68rem; }
+
+  /* Sticky booking CTA */
+  .whatsapp-float { bottom: 84px; }
+  .mobile-sticky-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 150;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+    color: var(--black);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    box-shadow: 0 -10px 24px -10px rgba(0,0,0,0.4);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+  .mobile-sticky-cta.is-hidden { transform: translateY(100%); }
 }
 
 @media (max-width: 960px) {
