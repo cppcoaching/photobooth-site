@@ -513,10 +513,20 @@ p { margin: 0 0 1em; }
 .flatpickr-current-month { font-size: 1.3rem; }
 .flatpickr-current-month .cur-month, .flatpickr-current-month input.cur-year { font-weight: 600; color: var(--text); }
 span.flatpickr-weekday { font-size: 0.8rem; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; }
-.flatpickr-days, .dayContainer { width: 100% !important; max-width: 100%; }
+.flatpickr-innerContainer, .flatpickr-rContainer {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.flatpickr-days, .dayContainer {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
 .flatpickr-day {
   border-radius: 10px;
   font-size: 1.15rem;
+  width: 14.2857% !important;
+  max-width: none !important;
   height: 58px;
   line-height: 56px;
   margin: 2px 0;
