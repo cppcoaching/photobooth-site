@@ -41,8 +41,27 @@
 
   // ----- Formulaire de réservation -----
   const bookingForm = document.getElementById("booking-form");
-  const bookingConfirm = document.getElementById("booking-confirm");
   const stripeBtn = document.getElementById("stripe-deposit-btn");
+  const whatsappBtn = document.getElementById("whatsapp-modal-btn");
+  const modalOverlay = document.getElementById("booking-modal-overlay");
+  const modalClose = document.getElementById("booking-modal-close");
+  const modalDate = document.getElementById("booking-modal-date");
+
+  function openBookingModal() {
+    modalOverlay.hidden = false;
+  }
+  function closeBookingModal() {
+    modalOverlay.hidden = true;
+  }
+  if (modalClose) modalClose.addEventListener("click", closeBookingModal);
+  if (modalOverlay) {
+    modalOverlay.addEventListener("click", function (e) {
+      if (e.target === modalOverlay) closeBookingModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modalOverlay.hidden) closeBookingModal();
+    });
+  }
 
   if (bookingForm) {
     bookingForm.addEventListener("submit", function (e) {
@@ -57,13 +76,27 @@
       const formData = new FormData(bookingForm);
 
       const finishUp = () => {
-        bookingConfirm.hidden = false;
+        modalDate.textContent = dateDisplay.value;
+
         const formule = document.getElementById("formule-select").value;
         const link = (CONFIG.STRIPE_LINKS || {})[formule];
         if (link && !link.includes("VOTRE_LIEN")) {
-          stripeBtn.href = link;
+          const email = bookingForm.querySelector('[name="email"]').value;
+          const url = new URL(link);
+          // Permet au webhook Stripe de savoir quelle date bloquer une fois le paiement confirmé.
+          url.searchParams.set("client_reference_id", dateValue.value);
+          if (email) url.searchParams.set("prefilled_email", email);
+          stripeBtn.href = url.toString();
           stripeBtn.hidden = false;
         }
+
+        if (whatsappBtn && CONFIG.WHATSAPP_NUMBER) {
+          const nom = bookingForm.querySelector('[name="nom"]').value;
+          const message = `Bonjour, je viens de faire une demande de réservation pour le ${dateDisplay.value}${nom ? " (" + nom + ")" : ""}, pouvez-vous me confirmer la disponibilité ?`;
+          whatsappBtn.href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+        }
+
+        openBookingModal();
         bookingForm.querySelector("button[type=submit]").disabled = true;
       };
 

@@ -1,0 +1,10 @@
+name = "boothinlyon-stripe-webhook"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# Les valeurs sensibles (STRIPE_WEBHOOK_SECRET, GITHUB_TOKEN) ne se mettent
+# PAS ici : elles se configurent avec `wrangler secret put` (voir SETUP.md).
+[vars]
+GITHUB_REPO = "cppcoaching/photobooth-site"
+GITHUB_BRANCH = "main"
+GITHUB_FILE_PATH = "data/unavailable-dates.json"

@@ -350,10 +350,6 @@
           <input type="hidden" name="_subject" value="Nouvelle demande de réservation — Booth In Lyon">
 
           <button type="submit" class="btn btn-gold btn-block">Envoyer ma demande de réservation</button>
-          <p class="form-note" id="booking-confirm" hidden>
-            Merci ! Votre demande a bien été envoyée, nous vous rappelons très vite. Vous pouvez dès maintenant verser votre acompte pour sécuriser votre date :
-          </p>
-          <a href="#" id="stripe-deposit-btn" class="btn btn-outline btn-block" hidden target="_blank" rel="noopener">Verser mon acompte en ligne</a>
         </form>
       </div>
     </div>
@@ -361,6 +357,21 @@
     <p class="booking-alt">Vous préférez nous parler directement plutôt que réserver en ligne ? Passez par notre <a href="#contact" class="link-gold">formulaire de contact</a> tout en bas de page.</p>
   </div>
 </section>
+
+<!-- ===== POP-UP CONFIRMATION DE DEMANDE ===== -->
+<div id="booking-modal-overlay" class="modal-overlay" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+    <button type="button" class="modal-close" id="booking-modal-close" aria-label="Fermer">✕</button>
+    <h3 id="booking-modal-title">Votre demande est bien envoyée !</h3>
+    <p class="modal-highlight">Votre date <strong id="booking-modal-date"></strong> est <strong>pré-réservée</strong> le temps qu'on se recontacte — elle n'est pas encore bloquée définitivement.</p>
+    <p>Pour la sécuriser dès maintenant, vous pouvez verser votre acompte en ligne. Le calendrier se bloque alors automatiquement à votre nom.</p>
+    <p>Si vous ne payez pas tout de suite, pas de souci : votre date reste visible et disponible sur le site, et nous vous recontactons <strong>sous 24h</strong> pour finaliser votre prestation ensemble. Elle pourrait toutefois être prise entre-temps par une autre personne qui verserait son acompte avant vous.</p>
+    <a href="#" id="stripe-deposit-btn" class="btn btn-blue btn-block" hidden target="_blank" rel="noopener">Verser mon acompte en ligne</a>
+    <p class="modal-or">— ou —</p>
+    <a href="#" id="whatsapp-modal-btn" class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">Nous appeler / écrire sur WhatsApp</a>
+    <p class="modal-note">Vous pouvez aussi simplement attendre notre appel sous 24h, sans rien faire de plus.</p>
+  </div>
+</div>
 
 <!-- ===== CONTACT ===== -->
 <section class="section section-dark" id="contact">
